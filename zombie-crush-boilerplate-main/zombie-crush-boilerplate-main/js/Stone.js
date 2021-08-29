@@ -12,8 +12,13 @@ class Stone {
 
     show(){
         var pos = this.body.position;
+        push();
         ellipseMode(RADIUS);
-        ellipse(pos.x, pos.y, this.r);
+        translate(pos.x, pos.y)
+        ellipse(0, 0, this.r);
+        pop();
+
+        console.log("hi")
     }
 
 }

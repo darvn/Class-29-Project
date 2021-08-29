@@ -26,7 +26,15 @@ function setup() {
   bridge = new Bridge(25, {x : wall1.body.position.x + 10, y : wall1.body.position.y - 105})
   joinPoint = new Base(windowWidth - 150, windowHeight/2 - 100, 0, 0);
 
-  
+  for(var i = 0; i <= 8; i++){
+    var x = random(width/2 - 200, width/2 + 300)
+    var y = random(-10, 140)
+    var stone = new Stone(x, y, 50);
+    stones.push(stone);
+    //for(var j = 0; j <= stones.length; j++){
+      
+    //}
+  }
 
   
 }
@@ -43,15 +51,7 @@ function draw() {
 
   bridge.show();
 
-  for(var i = 0; stones.length <= 8; i++){
-    var x = random(width/2 - 200, width/2 + 300)
-    var y = random(-10, 140)
-    var stone = new Stone(x, y, 50);
-    stone.show();
-    stones.push(stone);
-    //for(var j = 0; j <= stones.length; j++){
-      
-    //}
+  for(var i = 0; i <= 8; i++){
+    stones[i].show();
   }
-  
 }
